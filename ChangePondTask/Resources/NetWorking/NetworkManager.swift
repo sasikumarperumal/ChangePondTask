@@ -30,9 +30,7 @@ final class NetworkManager {
             var request = URLRequest(url: urlComp.url!)
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpMethod = "GET"
-            
-            print("Get Request shared URL : \(request)")
-            print("Get Request Params : \(parameters)")
+
             request.timeoutInterval = 30.0
             var returnRes:[String:Any] = [:]
             let task = URLSession.shared.dataTask(with: request) { data1, response, error in
@@ -55,7 +53,6 @@ final class NetworkManager {
                                     options: [])) != nil {
                                     theJSONText = String(data: data,
                                                          encoding: .utf8)!
-                                    print("Get Weather URL Response = \(theJSONText)")
                                 }
                             } catch let error as NSError {
                                 onCompletion(false, error, nil, data)

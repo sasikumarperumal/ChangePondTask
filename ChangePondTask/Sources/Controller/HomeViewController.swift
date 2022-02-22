@@ -180,7 +180,6 @@ extension HomeViewController {
 extension HomeViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        print("Searching with: " + (searchController.searchBar.text ?? ""))
         searchText = (searchController.searchBar.text ?? "")
         
         if searchText.count > 5 {

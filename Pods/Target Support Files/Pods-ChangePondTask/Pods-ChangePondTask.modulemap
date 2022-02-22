@@ -1,0 +1,6 @@
+framework module Pods_ChangePondTask {
+  umbrella header "Pods-ChangePondTask-umbrella.h"
+
+  export *
+  module * { export * }
+}

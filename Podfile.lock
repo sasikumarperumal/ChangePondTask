@@ -1,0 +1,16 @@
+PODS:
+  - RSLoadingView (1.1.3)
+
+DEPENDENCIES:
+  - RSLoadingView
+
+SPEC REPOS:
+  trunk:
+    - RSLoadingView
+
+SPEC CHECKSUMS:
+  RSLoadingView: c7749afdd455229643e8f34277d0695973a15b1a
+
+PODFILE CHECKSUM: 7aa28f57a11828e1b405e5a6fb238152397f0c1c
+
+COCOAPODS: 1.11.2
