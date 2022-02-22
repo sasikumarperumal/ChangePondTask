@@ -182,7 +182,7 @@ extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         searchText = (searchController.searchBar.text ?? "")
         
-        if searchText.count > 5 {
+        if searchText.count > 3 {
             CoreDataManagement.shared.delete()
             viewModel.getListApiCall(param: ["query":searchText,"page":self.nextPageKey])
         }
