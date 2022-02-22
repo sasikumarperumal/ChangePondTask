@@ -1,75 +1,60 @@
 //
-//  BubbleCellViewModel.swift
-//  Spark me
+//  HomeListCellViewModel.swift
+//  ChangePondTask
 //
-//  Created by adhash on 18/08/21.
+//  Created by Sasikumar Perumal on 20/02/22.
 //
 
 import Foundation
 
-final class BubbleCellViewModel {
-    
-    var bubbleListData:BubbleList?
-    
-    var bubbleList = [BubbleList]()
-    
-    private let networkManager = NetworkManager()
-    
-    var bubbleDeleteModel = LiveData<BubbleDeleteModel, Error>(value: nil)
+// MARK:- ViewModel for Setting Data
 
-    init(withModel:BubbleList?,withBubbleModel:[BubbleList]?)
+final class HomeListCellViewModel {
+    
+    var homeListData:Hits?
+
+    init(withModel:Hits?)
       {
-        bubbleListData = withModel
-        bubbleList = withBubbleModel ?? [BubbleList]()
+          homeListData = withModel
       }
     
     
-    
-    func bubbleDeleteApiCall(postDict:[String:Any]) {
-    
-        networkManager.post(port: 1, endpoint: .bubbleDelete, body: postDict) { [weak self] (result: Result<BubbleDeleteModel, Error>) in
-            guard let self = self else { return }
+    // MARK:- Created Date
+    public var getCreatedDate: String {
+        return convertedDate(DateStr: self.homeListData?.created_at ?? "")
+    }
 
-            switch result {
-          case .success(let bubbleDeleteData):
-            self.bubbleDeleteModel.value = bubbleDeleteData
-          case .failure(let error):
-            self.bubbleDeleteModel.error = error
-                
-            }
-        }
-      }
+    // MARK:- Title
+    public var getTitle: String {
+        return self.homeListData?.title ?? ""
+    }
+    
+    // MARK:- Author
+    public var getAuthor: String {
+        return self.homeListData?.author ?? ""
+    }
+    
+    // MARK:- Points
+    public var getPoints: Int {
+        return Int(self.homeListData?.points ?? 0)
+    }
+    
+    // MARK:- Score
+    public var getRelevencyScore: Int {
+        return Int(self.homeListData?.relevancy_score ?? 0)
+    }
+    
+    // MARK:- Date Function for converting ISO to Date
+    
+    func convertedDate(DateStr:String) -> String {
+        let inputDate = DateStr
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let date = dateFormatter.date(from: inputDate) ?? Date()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
 
-    //bubble Name
-    public var getBubbleImage: String {
-
-        let url = "\(SessionManager.sharedInstance.settingData?.data?.blobURL ?? "")\(SessionManager.sharedInstance.settingData?.data?.blobContainerName ?? "")/\("profilepic")/\(self.bubbleListData?.profilePic ?? "")"
-        
-        return url
-    }
-    
-    //bubble Name
-    public var getVisibleDate: Int {
-        return self.bubbleListData?.visibleDate ?? 0
-    }
-    
-    //bubble unique Id
-    public var getBubbleId: String {
-        return self.bubbleListData?._id ?? ""
-    }
-    
-    public var isAnonymousUser: Bool {
-        return self.bubbleListData?.allowAnonymous ?? false
-    }
-    
-    //bubble name
-    public var getBubbleName: String {
-        return self.bubbleListData?.displayName ?? ""
-    }
-    
-    //Get gender
-    public var getGender: Int {
-        return self.bubbleListData?.gender ?? 0
+        return dateFormatter.string(from: date)
     }
 
 }
+

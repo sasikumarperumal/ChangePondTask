@@ -2,13 +2,14 @@
 //  CoreDataManagement.swift
 //  ChangePondTask
 //
-//  Created by Sasikumar Perumal on 21/02/22.
+//  Created by Sasikumar Perumal on 20/02/22.
 //
 
 import Foundation
 import CoreData
 import UIKit
 
+// MARK:- API Class
 class CoreDataManagement: NSObject {
     
     static let shared: CoreDataManagement = CoreDataManagement()
@@ -18,58 +19,67 @@ class CoreDataManagement: NSObject {
     
     var hitsData: [NewsEntity]?
     
-    var newsFeeds = [Hits]()
-    func fetchDeviceData() {
+    var newsData = [Hits]()
+     
+    // MARK:- fetchDataDetails
+    
+    func fetchDataDetails() -> [Hits]? {
         do {
             self.hitsData = try context.fetch(NewsEntity.fetchRequest())
-            print("~~~LocalData Fetched deviceDatas: \(self.formDeviceDataUpdateRequest(data: self.hitsData ?? []))")
-            
-            newsFeeds = self.formDeviceDataUpdateRequest(data: self.hitsData ?? [])
-            
-            //            if self.hitsData?.count ?? 0 > 0 {
-            //                if let firstData = deviceDatas?.last {
-            //                    print("~~~LocalData updating data: \(firstData)")
-            //                    self.updateDeviceDataToServer(request: self.formDeviceDataUpdateRequest(data: firstData), deviceData: firstData)
-            //                }
-            //            } else {
-            //                print("~~~LocalData No data Avaialbe to update")
-            //            }
+            newsData = self.formCoreDataDetails(data: self.hitsData ?? [])
+            return newsData
+
         } catch {
             print("~~~LocalData Error in Fetch: \(error)")
         }
+        
+        return [Hits]()
     }
     
-    func formDeviceDataUpdateRequest(data: [NewsEntity]) -> [Hits] {
+    // MARK:- Delete Data Details
+    func delete() {
+        if let result = try? context.fetch(NewsEntity.fetchRequest()) {
+            for object in result {
+                context.delete(object)
+            }
+        }
+        do {
+            try context.save()
+        } catch {
+            //Handle error
+        }
+    }
+    
+    // MARK:- form CoreData Details
+    
+    func formCoreDataDetails(data: [NewsEntity]) -> [Hits] {
         
         var arrayOfHits = [Hits]()
         for hit in data {
-            let request = Hits(created_at: hit.created_at, title: hit.title, author: hit.author, points: hit.points, comment_text: hit.comment_text)
+            let request = Hits(created_at: hit.created_at, title: hit.title, author: hit.author, points: hit.points, comment_text: hit.comment_text, url: hit.url, relevancy_score: hit.relevancy_score)
             arrayOfHits.append(request)
         }
-        print("~~~LocalData Formed request: \(arrayOfHits)")
-
         return arrayOfHits
         
         
        
     }
     
+    // MARK:- Save Context Func
+    
     func saveContext() {
-        print("~~~LocalData Save Context")
         if self.context.hasChanges {
             do {
                 try self.context.save()
-                print("~~~LocalData Save Context has changes")
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
-                fatalError("~~~LocalData Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
     
-    func saveDeviceData(data: [Hits]) {
+    // MARK:- Save Details From CoreData
+    
+    func saveResponseToCoreData(data: [Hits]) {
         
         
         for hits in data {
@@ -81,13 +91,12 @@ class CoreDataManagement: NSObject {
             histData.author = hits.author
             histData.points = hits.points ?? 0
             histData.comment_text = hits.comment_text
+            histData.url = hits.url
+            histData.relevancy_score = hits.relevancy_score ?? 0
             
             self.saveContext()
             
         }
-        
-        fetchDeviceData()
-        
     }
     
 }

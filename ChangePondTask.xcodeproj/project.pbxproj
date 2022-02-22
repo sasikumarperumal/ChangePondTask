@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80120A6827C3F91400DA2219 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 80120A6727C3F91400DA2219 /* Reachability */; };
+		80120A6A27C3FB3700DA2219 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80120A6927C3FB3700DA2219 /* Reachability.swift */; };
+		80120A6C27C4066E00DA2219 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80120A6B27C4066D00DA2219 /* WebViewController.swift */; };
 		801A13AE27C0F7AE0087AE77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A13AD27C0F7AE0087AE77 /* AppDelegate.swift */; };
 		801A13B027C0F7AE0087AE77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A13AF27C0F7AE0087AE77 /* SceneDelegate.swift */; };
-		801A13B227C0F7AE0087AE77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A13B127C0F7AE0087AE77 /* ViewController.swift */; };
+		801A13B227C0F7AE0087AE77 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A13B127C0F7AE0087AE77 /* HomeViewController.swift */; };
 		801A13B527C0F7AE0087AE77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801A13B327C0F7AE0087AE77 /* Main.storyboard */; };
 		801A13B827C0F7AE0087AE77 /* ChangePondTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 801A13B627C0F7AE0087AE77 /* ChangePondTask.xcdatamodeld */; };
 		801A13BA27C0F7AF0087AE77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801A13B927C0F7AF0087AE77 /* Assets.xcassets */; };
@@ -17,6 +20,17 @@
 		801A13C827C0F7B00087AE77 /* ChangePondTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A13C727C0F7B00087AE77 /* ChangePondTaskTests.swift */; };
 		801A13D227C0F7B00087AE77 /* ChangePondTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A13D127C0F7B00087AE77 /* ChangePondTaskUITests.swift */; };
 		801A13D427C0F7B00087AE77 /* ChangePondTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A13D327C0F7B00087AE77 /* ChangePondTaskUITestsLaunchTests.swift */; };
+		801A13E827C0FB6C0087AE77 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A13E727C0FB6C0087AE77 /* NetworkManager.swift */; };
+		801A13EA27C0FB7D0087AE77 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A13E927C0FB7D0087AE77 /* Endpoints.swift */; };
+		801A141127C110BB0087AE77 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A141027C110BB0087AE77 /* HomeViewModel.swift */; };
+		801A142127C278EE0087AE77 /* HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A141F27C278EE0087AE77 /* HomeListTableViewCell.swift */; };
+		801A142227C278EE0087AE77 /* HomeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 801A142027C278EE0087AE77 /* HomeListTableViewCell.xib */; };
+		801A142727C284F40087AE77 /* HomeListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A142627C284F40087AE77 /* HomeListCellViewModel.swift */; };
+		8050ED1C27C33EED006AA43E /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8050ED1A27C33EED006AA43E /* BaseModel.swift */; };
+		8050ED1D27C33EED006AA43E /* Hits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8050ED1B27C33EED006AA43E /* Hits.swift */; };
+		8050ED2027C33F3F006AA43E /* NewsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8050ED1E27C33F3F006AA43E /* NewsEntity+CoreDataClass.swift */; };
+		8050ED2127C33F3F006AA43E /* NewsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8050ED1F27C33F3F006AA43E /* NewsEntity+CoreDataProperties.swift */; };
+		8050ED2327C3410A006AA43E /* CoreDataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8050ED2227C3410A006AA43E /* CoreDataManagement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		80120A6927C3FB3700DA2219 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		80120A6B27C4066D00DA2219 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		801A13AA27C0F7AE0087AE77 /* ChangePondTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangePondTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		801A13AD27C0F7AE0087AE77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		801A13AF27C0F7AE0087AE77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		801A13B127C0F7AE0087AE77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		801A13B127C0F7AE0087AE77 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		801A13B427C0F7AE0087AE77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		801A13B727C0F7AE0087AE77 /* ChangePondTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChangePondTask.xcdatamodel; sourceTree = "<group>"; };
 		801A13B927C0F7AF0087AE77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +67,17 @@
 		801A13CD27C0F7B00087AE77 /* ChangePondTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangePondTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		801A13D127C0F7B00087AE77 /* ChangePondTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePondTaskUITests.swift; sourceTree = "<group>"; };
 		801A13D327C0F7B00087AE77 /* ChangePondTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePondTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		801A13E727C0FB6C0087AE77 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		801A13E927C0FB7D0087AE77 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		801A141027C110BB0087AE77 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		801A141F27C278EE0087AE77 /* HomeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListTableViewCell.swift; sourceTree = "<group>"; };
+		801A142027C278EE0087AE77 /* HomeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListTableViewCell.xib; sourceTree = "<group>"; };
+		801A142627C284F40087AE77 /* HomeListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListCellViewModel.swift; sourceTree = "<group>"; };
+		8050ED1A27C33EED006AA43E /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		8050ED1B27C33EED006AA43E /* Hits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hits.swift; sourceTree = "<group>"; };
+		8050ED1E27C33F3F006AA43E /* NewsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NewsEntity+CoreDataClass.swift"; path = "ChangePondTask/NewsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8050ED1F27C33F3F006AA43E /* NewsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NewsEntity+CoreDataProperties.swift"; path = "ChangePondTask/NewsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8050ED2227C3410A006AA43E /* CoreDataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80120A6827C3F91400DA2219 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +109,9 @@
 		801A13A127C0F7AE0087AE77 = {
 			isa = PBXGroup;
 			children = (
+				80120A6927C3FB3700DA2219 /* Reachability.swift */,
+				8050ED1E27C33F3F006AA43E /* NewsEntity+CoreDataClass.swift */,
+				8050ED1F27C33F3F006AA43E /* NewsEntity+CoreDataProperties.swift */,
 				801A13AC27C0F7AE0087AE77 /* ChangePondTask */,
 				801A13C627C0F7B00087AE77 /* ChangePondTaskTests */,
 				801A13D027C0F7B00087AE77 /* ChangePondTaskUITests */,
@@ -101,11 +132,11 @@
 		801A13AC27C0F7AE0087AE77 /* ChangePondTask */ = {
 			isa = PBXGroup;
 			children = (
-				801A13AD27C0F7AE0087AE77 /* AppDelegate.swift */,
-				801A13AF27C0F7AE0087AE77 /* SceneDelegate.swift */,
-				801A13B127C0F7AE0087AE77 /* ViewController.swift */,
+				801A13F127C0FEF70087AE77 /* Asset */,
+				801A13F027C0FEE70087AE77 /* AppDelegate */,
+				801A13EE27C0FEC90087AE77 /* Resources */,
+				801A13ED27C0FEBF0087AE77 /* Sources */,
 				801A13B327C0F7AE0087AE77 /* Main.storyboard */,
-				801A13B927C0F7AF0087AE77 /* Assets.xcassets */,
 				801A13BB27C0F7AF0087AE77 /* LaunchScreen.storyboard */,
 				801A13BE27C0F7AF0087AE77 /* Info.plist */,
 				801A13B627C0F7AE0087AE77 /* ChangePondTask.xcdatamodeld */,
@@ -130,6 +161,96 @@
 			path = ChangePondTaskUITests;
 			sourceTree = "<group>";
 		};
+		801A13E027C0F7FB0087AE77 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				801A13E727C0FB6C0087AE77 /* NetworkManager.swift */,
+				801A13E927C0FB7D0087AE77 /* Endpoints.swift */,
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
+		801A13ED27C0FEBF0087AE77 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				801A141B27C2604E0087AE77 /* CoreDataController */,
+				801A141E27C278D50087AE77 /* CustomCell */,
+				801A13F327C0FF110087AE77 /* Model */,
+				801A13F227C0FF0A0087AE77 /* ViewModel */,
+				801A13EF27C0FEDA0087AE77 /* Controller */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		801A13EE27C0FEC90087AE77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				801A13E027C0F7FB0087AE77 /* NetWorking */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		801A13EF27C0FEDA0087AE77 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				801A13B127C0F7AE0087AE77 /* HomeViewController.swift */,
+				80120A6B27C4066D00DA2219 /* WebViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		801A13F027C0FEE70087AE77 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				801A13AD27C0F7AE0087AE77 /* AppDelegate.swift */,
+				801A13AF27C0F7AE0087AE77 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		801A13F127C0FEF70087AE77 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				801A13B927C0F7AF0087AE77 /* Assets.xcassets */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		801A13F227C0FF0A0087AE77 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				801A141027C110BB0087AE77 /* HomeViewModel.swift */,
+				801A142627C284F40087AE77 /* HomeListCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		801A13F327C0FF110087AE77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8050ED1A27C33EED006AA43E /* BaseModel.swift */,
+				8050ED1B27C33EED006AA43E /* Hits.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		801A141B27C2604E0087AE77 /* CoreDataController */ = {
+			isa = PBXGroup;
+			children = (
+				8050ED2227C3410A006AA43E /* CoreDataManagement.swift */,
+			);
+			path = CoreDataController;
+			sourceTree = "<group>";
+		};
+		801A141E27C278D50087AE77 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				801A141F27C278EE0087AE77 /* HomeListTableViewCell.swift */,
+				801A142027C278EE0087AE77 /* HomeListTableViewCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +267,9 @@
 			dependencies = (
 			);
 			name = ChangePondTask;
+			packageProductDependencies = (
+				80120A6727C3F91400DA2219 /* Reachability */,
+			);
 			productName = ChangePondTask;
 			productReference = 801A13AA27C0F7AE0087AE77 /* ChangePondTask.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +342,9 @@
 				Base,
 			);
 			mainGroup = 801A13A127C0F7AE0087AE77;
+			packageReferences = (
+				80120A6627C3F91400DA2219 /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			productRefGroup = 801A13AB27C0F7AE0087AE77 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +363,7 @@
 			files = (
 				801A13BD27C0F7AF0087AE77 /* LaunchScreen.storyboard in Resources */,
 				801A13BA27C0F7AF0087AE77 /* Assets.xcassets in Resources */,
+				801A142227C278EE0087AE77 /* HomeListTableViewCell.xib in Resources */,
 				801A13B527C0F7AE0087AE77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,10 +389,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				801A13B227C0F7AE0087AE77 /* ViewController.swift in Sources */,
+				801A13B227C0F7AE0087AE77 /* HomeViewController.swift in Sources */,
+				8050ED1C27C33EED006AA43E /* BaseModel.swift in Sources */,
+				8050ED2327C3410A006AA43E /* CoreDataManagement.swift in Sources */,
+				8050ED2027C33F3F006AA43E /* NewsEntity+CoreDataClass.swift in Sources */,
+				801A142727C284F40087AE77 /* HomeListCellViewModel.swift in Sources */,
 				801A13B827C0F7AE0087AE77 /* ChangePondTask.xcdatamodeld in Sources */,
+				801A13E827C0FB6C0087AE77 /* NetworkManager.swift in Sources */,
 				801A13AE27C0F7AE0087AE77 /* AppDelegate.swift in Sources */,
+				801A13EA27C0FB7D0087AE77 /* Endpoints.swift in Sources */,
 				801A13B027C0F7AE0087AE77 /* SceneDelegate.swift in Sources */,
+				801A142127C278EE0087AE77 /* HomeListTableViewCell.swift in Sources */,
+				80120A6C27C4066E00DA2219 /* WebViewController.swift in Sources */,
+				8050ED2127C33F3F006AA43E /* NewsEntity+CoreDataProperties.swift in Sources */,
+				801A141127C110BB0087AE77 /* HomeViewModel.swift in Sources */,
+				80120A6A27C3FB3700DA2219 /* Reachability.swift in Sources */,
+				8050ED1D27C33EED006AA43E /* Hits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +748,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80120A6627C3F91400DA2219 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80120A6727C3F91400DA2219 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80120A6627C3F91400DA2219 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		801A13B627C0F7AE0087AE77 /* ChangePondTask.xcdatamodeld */ = {

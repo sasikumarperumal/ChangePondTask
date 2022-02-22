@@ -1,17 +1,12 @@
-/* 
-Copyright (c) 2022 Swift Models Generated from JSON powered by http://www.json4swift.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar
-
-*/
+//  ChangePondTask
+//
+//  Created by Sasikumar Perumal on 20/02/22.
 
 import Foundation
+import CoreData
+
+// MARK:- API Response Needed Model
+
 struct BaseModel : Codable {
 	let hits : [Hits]?
 	let nbHits : Int?
@@ -53,3 +48,44 @@ struct BaseModel : Codable {
 	}
 
 }
+
+
+// MARK:- Used for Common Model
+struct CoreDataModel : Codable{
+    
+    let created_at : String?
+    let title : String?
+    let author : String?
+    let points : Int?
+    let comment_text : String?
+    let url : String?
+    let relevancy_score : Int?
+
+    enum CodingKeys: String, CodingKey {
+
+        case created_at = "created_at"
+        case title = "title"
+        case author = "author"
+        case points = "points"
+        case comment_text = "comment_text"
+        case url = "url"
+        case relevancy_score = "relevancy_score"
+        
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        created_at = try values.decodeIfPresent(String.self, forKey: .created_at)
+        title = try values.decodeIfPresent(String.self, forKey: .title)
+        author = try values.decodeIfPresent(String.self, forKey: .author)
+        points = try values.decodeIfPresent(Int.self, forKey: .points)
+        comment_text = try values.decodeIfPresent(String.self, forKey: .comment_text)
+        url = try values.decodeIfPresent(String.self, forKey: .url)
+        relevancy_score = try values.decodeIfPresent(Int.self, forKey: .relevancy_score)
+
+        
+    }
+
+}
+

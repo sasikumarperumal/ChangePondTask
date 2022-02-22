@@ -22,6 +22,7 @@ extension NewsEntity {
     @NSManaged public var points: Int16
     @NSManaged public var relevancy_score: Int16
     @NSManaged public var title: String?
+    @NSManaged public var url: String?
 
 }
 

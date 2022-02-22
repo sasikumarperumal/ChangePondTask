@@ -1,13 +1,13 @@
 //
 //  Reachability.swift
-//  Love Pulse
+//  ChangePondTask
 //
-//  Created by Mohan on 08/07/19.
-//  Copyright © 2019 Adhashtechnolab. All rights reserved.
+//  Created by Sasikumar Perumal on 20/02/22.
 //
 
 import Foundation
 import SystemConfiguration
+
 public class ConnectionCheck
 {
     
